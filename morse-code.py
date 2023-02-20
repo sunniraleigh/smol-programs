@@ -43,7 +43,14 @@ morse = {
   "7":"--***",
   "8":"---**",
   "9":"----*",
-  "0":"-----"
+  "0":"-----",
+  " ":"  "
 }
 
+# ask user for initial phrase to translate
+init_phrase = input("Enter a phrase or word to translate: ").toLowerCase()
 
+# iterate over phrase and find corresponding morse code translation
+for char in init_phrase:
+  print(morse[char], end=" ")
+print()
